@@ -12,7 +12,9 @@ builder.Services.AddDbContext<MvcCelebrityContext>(options =>
 if (builder.Environment.IsDevelopment())
 {
     builder.Services.AddDbContext<MvcMovieContext>(options =>
-        options.UseSqlite(builder.Configuration.GetConnectionString("MvcMovieContext")));
+        options.UseSqlite(builder.Configuration.GetConnectionString("MvcCelebrityContext")));
+    builder.Services.AddDbContext<MvcMovieContext>(options =>
+        options.UseSqlite(builder.Configuration.GetConnectionString("MvcCelebrityContext")));
 }
 else
 {

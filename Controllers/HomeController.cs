@@ -22,6 +22,16 @@ public class HomeController : Controller
     {
         return View();
     }
+    
+    public IActionResult Movies()
+    {
+        return View("~/Views/Movies/Index.cshtml");
+    }
+    
+    public IActionResult Celebrities()
+    {
+        return View("~/Views/Celebrities/Index.cshtml");
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

@@ -1,0 +1,55 @@
+# ASP.NET Core
+bin/
+obj/
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio for Mac
+.idea/
+*.userprefs
+*.usertasks
+
+# Build artifacts
+*.dll
+*.exe
+*.pdb
+*.log
+*.cache
+*.gz
+
+# Dependency directories
+node_modules/
+packages/
+
+# Environment-based ignore
+*.DS_Store
+Thumbs.db
+
+# Secret configuration files
+appsettings.Development.json
+appsettings.Production.json
+appsettings.local.json
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mac-specific files
+.DS_Store
+
+# IDE-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore generated files in Identity
+**/Migrations/*.Designer.cs
+
+# Ignore build and publish folders
+bin/
+obj/
+publish/

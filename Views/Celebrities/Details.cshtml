@@ -10,29 +10,37 @@
     <h4>Celebrity</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Name)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.BirthDate)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.BirthDate)
         </dd>
-        <dt class = "col-sm-2">
-                    @Html.DisplayNameFor(model => model.Age)
-                </dt>
-        <dd class = "col-sm-10">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Age)
         </dd>
-        <dt class = "col-sm-2">
-                    @Html.DisplayNameFor(model => model.Movies)
-                </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Movies)
+        <dt class="col-sm-2">
+            Movies
+        </dt>
+        <dd class="col-sm-10">
+            <ul>
+                @if (Model.Movies != null)
+                {
+                    foreach (var movie in Model.Movies)
+                    {
+                        <li>@movie.Title - @movie.ReleaseData.ToShortDateString()</li>
+                    }
+                }
+            </ul>
         </dd>
     </dl>
 </div>

@@ -63,6 +63,12 @@ public static class SeedData
                             Price = 9.99m
                         }
                     }
+                },
+                new Celebrity
+                {
+                    Name = "Mike Leahy",
+                    BirthDate = DateTime.Parse("1989-03-02"),
+                    Movies = new List<Movie>()
                 }
             );
             context.SaveChanges();
@@ -112,6 +118,13 @@ public static class SeedData
                     ReleaseData = DateTime.Parse("1919-4-15"),
                     Genre = "Action",
                     Price = 4.99M
+                },
+                new Movie
+                {
+                    Title = "John Wick 40",
+                    ReleaseData = DateTime.Parse("2019-4-15"),
+                    Genre = "Action",
+                    Price = 14.99M
                 }
             );
             context.SaveChanges();

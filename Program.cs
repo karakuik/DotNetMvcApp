@@ -1,9 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using MvcMovie.Data;
 using MyMvcApp.Models;
+using MyMvcApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<MvcCelebrityContext>(options =>
+
+    options.UseSqlite(builder.Configuration.GetConnectionString("MvcCelebrityContext")));
 
 if (builder.Environment.IsDevelopment())
 {

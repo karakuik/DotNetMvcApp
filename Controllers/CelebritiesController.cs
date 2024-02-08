@@ -54,7 +54,7 @@ namespace MyMvcApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,BirthDate")] Celebrity celebrity)
+        public async Task<IActionResult> Create([Bind("Id,Name,BirthDate,Movies")] Celebrity celebrity)
         {
             if (ModelState.IsValid)
             {

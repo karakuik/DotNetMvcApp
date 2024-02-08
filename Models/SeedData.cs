@@ -31,14 +31,16 @@ public static class SeedData
                             Title = "Harry Potter and the Sorcerer's Stone",
                             ReleaseData = DateTime.Parse("2001-11-16"),
                             Genre = "Fantasy",
-                            Price = 9.99m
+                            Price = 9.99m,
+                            Rating = "PG-13"
                         },
                         new Movie
                         {
                             Title = "Harry Potter and the Chamber of Secrets",
                             ReleaseData = DateTime.Parse("2002-11-15"),
                             Genre = "Fantasy",
-                            Price = 9.99m
+                            Price = 9.99m,
+                            Rating = "PG-13"
                         }
                     }
                 },
@@ -53,14 +55,16 @@ public static class SeedData
                             Title = "Top Gun",
                             ReleaseData = DateTime.Parse("1986-05-16"),
                             Genre = "Action",
-                            Price = 9.99m
+                            Price = 9.99m,
+                            Rating = "R"
                         },
                         new Movie
                         {
                             Title = "Mission: Impossible",
                             ReleaseData = DateTime.Parse("1996-05-22"),
                             Genre = "Action",
-                            Price = 9.99m
+                            Price = 9.99m,
+                            Rating = "PG-13"
                         }
                     }
                 },
@@ -89,42 +93,48 @@ public static class SeedData
                     Title = "When Harry Met Sally",
                     ReleaseData = DateTime.Parse("1989-2-12"),
                     Genre = "Romantic Comedy",
-                    Price = 7.99M
+                    Price = 7.99M,
+                    Rating = "PG"
                 },
                 new Movie
                 {
                     Title = "Ghostbusters ",
                     ReleaseData = DateTime.Parse("1984-3-13"),
                     Genre = "Comedy",
-                    Price = 8.99M
+                    Price = 8.99M,
+                    Rating = "PG-13"
                 },
                 new Movie
                 {
                     Title = "Ghostbusters 2",
                     ReleaseData = DateTime.Parse("1986-2-23"),
                     Genre = "Comedy",
-                    Price = 9.99M
+                    Price = 9.99M,
+                    Rating = "R"
                 },
                 new Movie
                 {
                     Title = "Rio Bravo",
                     ReleaseData = DateTime.Parse("1959-4-15"),
                     Genre = "Western",
-                    Price = 3.99M
+                    Price = 3.99M,
+                    Rating = "R"
                 },
                 new Movie
                 {
                     Title = "John Schmoe",
                     ReleaseData = DateTime.Parse("1919-4-15"),
                     Genre = "Action",
-                    Price = 4.99M
+                    Price = 4.99M,
+                    Rating = "PG-13"
                 },
                 new Movie
                 {
                     Title = "John Wick 40",
                     ReleaseData = DateTime.Parse("2019-4-15"),
                     Genre = "Action",
-                    Price = 14.99M
+                    Price = 14.99M,
+                    Rating = "R"
                 }
             );
             context.SaveChanges();

@@ -6,8 +6,13 @@ using MyMvcApp.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<MvcCelebrityContext>(options =>
-
     options.UseSqlite(builder.Configuration.GetConnectionString("MvcCelebrityContext")));
+
+builder.Services.AddControllers();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Your API Title", Version = "v1" });
+});
 
 if (builder.Environment.IsDevelopment())
 {
@@ -44,6 +49,12 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API V1");
+});
 
 app.UseRouting();
 
